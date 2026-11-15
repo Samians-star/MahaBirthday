@@ -1,0 +1,44 @@
+HOW TO ADD YOUR OWN PICTURES (from your iPhone, using github.com in Safari)
+===========================================================================
+
+BEFORE YOU START
+- Use JPG or PNG pictures. (iPhone HEIC pictures often will not show on websites.)
+- Smaller is better. Pictures over ~1 MB make the website slower. If you have lots of big
+  pictures, send them to Claude and ask it to shrink them and prepare everything for you.
+- Give each picture a simple name: p1.jpg, p2.jpg, p3.jpg ...
+  (lowercase, no spaces. GitHub is case-sensitive: P1.JPG is NOT the same as p1.jpg)
+  Rename in the Files app: long-press the picture > Rename.
+
+STEP 1 - UPLOAD THE PICTURES
+1. Open github.com > your MahaBirthday repo.
+2. Tap  Add file > Upload files.
+3. Choose all your pictures at once > wait for them to load.
+4. Tap  Commit changes.
+   (They must sit in the same place as index.html - the main page of the repo.)
+
+STEP 2 - TELL THE WEBSITE ABOUT THEM
+1. In the repo, tap the file  photos.js  > tap the pencil icon (Edit).
+2. Add one line per picture inside the [ ] - for example:
+      {file:"p1.jpg", caption:"Our first trip"},
+      {file:"p2.jpg", caption:"Her smile"},
+      {file:"p3.jpg", caption:""},
+   * file    = the exact name you uploaded
+   * caption = the words under the picture (leave "" for none)
+   * Remove the // at the start of a line if you are using the example lines.
+3. Tap  Commit changes.
+4. Wait 1-2 minutes and refresh her website (pull down to refresh, or close and reopen it).
+
+HOW DO I KNOW WHAT PICTURE GOES WHERE?
+- The ORDER of the lines in photos.js is the order everywhere.
+- Every picture you add shows up in ALL of these:
+    Saturn photo gallery - Memory Wall - Picture Book (one page each) - Swipe Right on Us
+    - Decorate Our Photo - Memory of Us (match game) - A Little Movie of Us
+- Line 1 = first page of the Picture Book, line 2 = second page, and so on.
+- The 6 starter collages always come first. To use ONLY your own pictures, change
+  window.REPLACE_DEFAULT_PHOTOS = false;   to   true;
+- Want a picture in only one place? Ask Claude and it will set that up for you.
+
+IF A PICTURE DOES NOT SHOW
+- Check the file name matches exactly (capitals, .jpg vs .jpeg, no spaces).
+- Make sure the picture was uploaded next to index.html.
+- Make sure every line in photos.js ends with a comma and the quotes are straight " ".
